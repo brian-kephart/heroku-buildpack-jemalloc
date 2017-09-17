@@ -58,5 +58,5 @@ export LIBRARY_PATH="\${LIBRARY_PATH:+${LIBRARY_PATH}:}${LIBRARY_PATH//$BUILD_DI
 export PKG_CONFIG_PATH="\${PKG_CONFIG_PATH:+${PKG_CONFIG_PATH}:}${PKG_CONFIG_PATH//$BUILD_DIR//app}"
 export CPPPATH="\${CPPPATH:+${CPPPATH}:}${CPPPATH//$BUILD_DIR//app}"
 export CPATH="\${CPATH:+${CPATH}:}${CPATH//$BUILD_DIR//app}"
-export LD_PRELOAD="/app/vendor/jemalloc/lib/libjemalloc.so.1"
+export LD_PRELOAD=`jemalloc-config --libdir`/libjemalloc.so.`jemalloc-config --revision` app
 EOF

@@ -1,4 +1,4 @@
-FROM heroku/cedar
+FROM heroku/heroku:16-build
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -8,4 +8,4 @@ RUN \
   ./configure --prefix=/app/vendor/jemalloc && \
   make install_bin install_include install_lib_shared install_lib_static && \
   cd /app/vendor/jemalloc && \
-  tar zcf /tmp/jemalloc-cedar.tar.gz .
+  tar zcf /tmp/jemalloc-heroku.tar.gz .

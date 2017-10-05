@@ -3,31 +3,26 @@
 I am a Heroku buildpack that installs
 [jemalloc](http://www.canonware.com/jemalloc/) into a dyno slug.
 
+This buildpack is based on the Heroku-16 stack. Older stacks are not supported.
+
+This repo was originally forked from [https://github.com/mojodna/heroku-buildpack-jemalloc](https://github.com/mojodna/heroku-buildpack-jemalloc). If you happen to be migrating from that buildpack to this one, make sure not to set `LD_PRELOAD` in Heroku config or use `jemalloc.sh` in your Procfile.
+
 ## Using
 
-[Heroku now supports using multiple buildpacks for an app](https://devcenter.heroku.com/articles/using-multiple-buildpacks-for-an-app).
-
 ```bash
-heroku buildpacks:add --index 1 https://github.com/mojodna/heroku-buildpack-jemalloc.git
+heroku buildpacks:add --index 1 https://github.com/brian-kephart/heroku-buildpack-jemalloc.git
 git push heroku master
 ```
-
-If you're not seeing great results from Jemalloc 4.x, you can try Jemalloc 3.6 instead:
-
-```bash
-heroku buildpacks:add --index 1 https://github.com/mojodna/heroku-buildpack-jemalloc.git#v3.6.0
-git push heroku master
-```
-
-Note that you can also use this syntax to lock your buildpack to a specific release.
 
 ## Building
 
-This uses Docker to build against Heroku
-[stack-image](https://github.com/heroku/stack-images)-like images.
+This uses Docker to build against a [Heroku stack image](https://github.com/heroku/stack-images). Make sure you have Docker running before building, then run:
 
 ```bash
 make
 ```
 
 Artifacts will be dropped in `dist/`.  See `Dockerfile`s for build options.
+
+## Known Issues/Concerns
+This buildpack uses the `LD_PRELOAD` environment variable to use jemalloc for all commands run on the dyno. If you need `LD_PRELOAD` for other purposes or want to use jemalloc only for certain processes, [use this instead](https://github.com/mojodna/heroku-buildpack-jemalloc).

@@ -1,6 +1,6 @@
-default: dist/jemalloc-5.0.0-1.tar.gz
+default: dist/jemalloc-5.0.1-1.tar.gz
 
-dist/jemalloc-5.0.0-1.tar.gz: jemalloc-heroku
+dist/jemalloc-5.0.1-1.tar.gz: jemalloc-heroku
 	docker cp $<:/tmp/jemalloc-heroku.tar.gz .
 	mkdir -p $$(dirname $@)
 	mv jemalloc-heroku.tar.gz $@
@@ -11,7 +11,7 @@ clean:
 
 src/jemalloc.tar.bz2:
 	mkdir -p $$(dirname $@)
-	curl -sL https://github.com/jemalloc/jemalloc/releases/download/5.0.0/jemalloc-5.0.0.tar.bz2 -o $@
+	curl -sL https://github.com/jemalloc/jemalloc/releases/download/5.0.1/jemalloc-5.0.1.tar.bz2 -o $@
 
 .PHONY: jemalloc-heroku
 

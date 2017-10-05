@@ -25,4 +25,4 @@ make
 Artifacts will be dropped in `dist/`.  See `Dockerfile`s for build options.
 
 ## Known Issues/Concerns
-This buildpack uses the `LD_PRELOAD` environment variable to use jemalloc for all commands run on the dyno. If you need `LD_PRELOAD` for other purposes or want to use jemalloc only for certain processes, [use this instead](https://github.com/mojodna/heroku-buildpack-jemalloc).
+This buildpack uses the `LD_PRELOAD` environment variable to use jemalloc for all commands run on all dynos. If you need `LD_PRELOAD` for other purposes or want to use jemalloc only for certain processes, [use this instead](https://github.com/mojodna/heroku-buildpack-jemalloc).

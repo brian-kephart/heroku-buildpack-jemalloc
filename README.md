@@ -3,7 +3,7 @@
 This Heroku buildpack installs
 [jemalloc](http://www.canonware.com/jemalloc/) into a dyno slug.
 
-The current version is built with the Heroku-16 stack. There is a branch built with the public beta of Heroku-18, which will be merged to master when Heroku-18 becomes the new default stack. Older stacks are not supported, though in theory and experience they should run this buildpack just fine.
+The current version is built with the Heroku-18 stack.
 
 ## Buildpack goals
 

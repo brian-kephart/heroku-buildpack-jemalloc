@@ -1,3 +1,5 @@
+# This branch has been merged into master and will not receive further development. Please use the master branch instead.
+
 # heroku-buildpack-jemalloc
 
 This Heroku buildpack installs

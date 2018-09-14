@@ -34,6 +34,8 @@ function vendor() {
   true
 }
 
+echo "-----> *** DEPRECATED BRANCH ***"
+echo "-----> You are using a prerelease branch of this buildpack that has been merged into master. You are advised to switch to the master branch."
 echo "-----> Vendoring binaries"
 vendor "https://github.com/brian-kephart/heroku-buildpack-jemalloc/releases/download/5.1.0_heroku-18/jemalloc-5.1.0_heroku-18.tar.gz" "$BUILD_DIR/vendor/jemalloc"
 

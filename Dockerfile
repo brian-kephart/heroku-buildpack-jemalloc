@@ -2,7 +2,7 @@ FROM heroku/heroku:18-build
 
 ENV DEBIAN_FRONTEND noninteractive
 
-ADD src/jemalloc-5.2.0.tar.bz2 /tmp
+ADD src/jemalloc-5.2.1.tar.bz2 /tmp
 RUN \
   cd /tmp/jemalloc-* && \
   ./configure --prefix=/app/vendor/jemalloc && \

@@ -1,6 +1,6 @@
-default: dist/jemalloc-5.2.1_heroku-18.tar.gz
+default: dist/jemalloc-5.2.1_heroku-20.tar.gz
 
-dist/jemalloc-5.2.1_heroku-18.tar.gz: jemalloc-heroku
+dist/jemalloc-5.2.1_heroku-20.tar.gz: jemalloc-heroku
 	docker cp $<:/tmp/jemalloc-heroku.tar.gz .
 	mkdir -p $$(dirname $@)
 	mv jemalloc-heroku.tar.gz $@

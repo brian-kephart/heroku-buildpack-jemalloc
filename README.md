@@ -1,9 +1,9 @@
 # heroku-buildpack-jemalloc
 
 This Heroku buildpack installs
-[jemalloc](http://www.canonware.com/jemalloc/) into a dyno slug.
+[jemalloc](http://jemalloc.net/) into a dyno slug.
 
-The current version is built with the Heroku-18 stack.
+The current version is built with the Heroku-20 stack.
 
 ## Buildpack goals
 

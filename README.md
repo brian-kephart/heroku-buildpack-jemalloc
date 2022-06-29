@@ -3,7 +3,7 @@
 This Heroku buildpack installs
 [jemalloc](http://jemalloc.net/) into a dyno slug.
 
-The current version is built with the Heroku-20 stack.
+The current version is built with the Heroku-22 stack.
 
 ## Buildpack goals
 

@@ -1,4 +1,4 @@
-FROM heroku/heroku:22-build
+FROM --platform=linux/amd64 heroku/heroku:22-build
 
 ENV DEBIAN_FRONTEND noninteractive
 
